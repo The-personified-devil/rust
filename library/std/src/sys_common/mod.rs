@@ -16,6 +16,7 @@
 
 #![allow(missing_docs)]
 #![allow(missing_debug_implementations)]
+#![allow(unexpected_cfgs)]
 
 #[cfg(test)]
 mod tests;
@@ -44,6 +45,7 @@ cfg_if::cfg_if! {
 
 cfg_if::cfg_if! {
     if #[cfg(any(target_os = "l4re",
+                 target_os = "atomkern",
                  feature = "restricted-std",
                  all(target_family = "wasm", not(target_os = "emscripten")),
                  all(target_vendor = "fortanix", target_env = "sgx")))] {

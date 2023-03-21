@@ -88,6 +88,7 @@ mod windows_gnullvm_base;
 mod windows_msvc_base;
 mod windows_uwp_gnu_base;
 mod windows_uwp_msvc_base;
+mod atomkern_base;
 
 /// Linker is called through a C/C++ compiler.
 #[derive(Clone, Copy, Debug, Eq, Ord, PartialEq, PartialOrd)]
@@ -1260,6 +1261,8 @@ supported_targets! {
 
     ("aarch64-unknown-nto-qnx710", aarch64_unknown_nto_qnx_710),
     ("x86_64-pc-nto-qnx710", x86_64_pc_nto_qnx710),
+
+    ("x86_64-unknown-atomkern", x86_64_unknown_atomkern),
 }
 
 /// Cow-Vec-Str: Cow<'static, [Cow<'static, str>]>
