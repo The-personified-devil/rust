@@ -21,6 +21,7 @@
 //! achieve.
 
 #![allow(missing_debug_implementations)]
+#![allow(unexpected_cfgs)]
 
 pub mod common;
 
@@ -37,6 +38,9 @@ cfg_if::cfg_if! {
     } else if #[cfg(target_os = "hermit")] {
         mod hermit;
         pub use self::hermit::*;
+    } else if #[cfg(target_os = "atomkern")] {
+        mod atomkern;
+        pub use self::atomkern::*;
     } else if #[cfg(target_os = "wasi")] {
         mod wasi;
         pub use self::wasi::*;

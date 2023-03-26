@@ -6,7 +6,7 @@ pub fn opts() -> TargetOptions {
     TargetOptions {
         os: "atomkern".into(),
         executables: true,
-        linker: Some("ld.lld".into()),
+        linker: Some("rust-lld".into()),
         linker_flavor: LinkerFlavor::Gnu(Cc::No, Lld::Yes),
         stack_probes: StackProbeType::Inline,
         ..Default::default()

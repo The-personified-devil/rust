@@ -2946,6 +2946,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "libos"
+version = "0.1.0"
+dependencies = [
+ "cfg-if",
+ "compiler_builtins",
+ "nasm-rs",
+ "rustc-std-workspace-core",
+]
+
+[[package]]
 name = "libssh2-sys"
 version = "0.2.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3278,6 +3288,12 @@ version = "0.1.0"
 dependencies = [
  "regex",
 ]
+
+[[package]]
+name = "nasm-rs"
+version = "0.2.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ce095842aee9aa3ecbda7a5d2a4df680375fd128a8596b6b56f8e497e231f483"
 
 [[package]]
 name = "new_debug_unreachable"
@@ -5942,6 +5958,7 @@ dependencies = [
  "hashbrown 0.12.3",
  "hermit-abi 0.3.0",
  "libc",
+ "libos",
  "miniz_oxide",
  "object 0.29.0",
  "panic_abort",

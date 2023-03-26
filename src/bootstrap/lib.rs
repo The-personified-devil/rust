@@ -124,6 +124,7 @@ const EXTRA_CHECK_CFGS: &[(Option<Mode>, &'static str, Option<&[&'static str]>)]
     (Some(Mode::Std), "no_sync", None),
     (Some(Mode::Std), "freebsd12", None),
     (Some(Mode::Std), "backtrace_in_libstd", None),
+    (Some(Mode::Std), "atomkern", Some(&["atomkern", "ATOMKERN"])),
     /* Extra values not defined in the built-in targets yet, but used in std */
     (Some(Mode::Std), "target_env", Some(&["libnx"])),
     // (Some(Mode::Std), "target_os", Some(&[])),

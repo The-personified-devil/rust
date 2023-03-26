@@ -1,10 +1,12 @@
 use crate::alloc::{GlobalAlloc, Layout, System};
 use crate::ptr::null_mut;
+use libos::do_syscall;
 
 #[stable(feature = "alloc_system_type", since = "1.28.0")]
 unsafe impl GlobalAlloc for System {
     #[inline]
     unsafe fn alloc(&self, _layout: Layout) -> *mut u8 {
+        unsafe { do_syscall(2, 0, 0, 0, 5); }
         null_mut()
     }
 

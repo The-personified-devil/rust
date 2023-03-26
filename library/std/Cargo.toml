@@ -48,6 +48,9 @@ hermit-abi = { version = "0.3.0", features = ['rustc-dep-of-std'] }
 [target.wasm32-wasi.dependencies]
 wasi = { version = "0.11.0", features = ['rustc-dep-of-std'], default-features = false }
 
+[target.'cfg(target_os = "atomkern")'.dependencies]
+libos = { path = "../../../atomkern_os/libos", features = ["rustc-dep-of-std"] }
+
 [features]
 backtrace = [
   "gimli-symbolize",
